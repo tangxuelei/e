@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "emscripten.h": "c",
+        "fetch.h": "c",
+        "cmath": "c",
+        "complex": "c",
+        "valarray": "c",
+        "regex": "c",
+        "sstream": "c",
+        "strstream": "c",
+        "filesystem": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+}

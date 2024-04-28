@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="main.js"></script>
+    <script>
+        var out = Module['print'] || console.log.bind(console);
+        var err = Module['printErr'] || console.error.bind(console);
+    </script>
+    <button onclick="test1()">test1</button>
+
+    <script>
+        const log=console.log
+        function test1(){
+            // log(Module._add(11,22))
+            // log(Module.HEAP32[Module._getnumptr()/4])
+            // log(Module.HEAPF32[Module._getfltptr()/4])
+            // log(Module.UTF8ToString(Module._getStr(Module.allocateUTF8("hello:"),Module.allocateUTF8("dog"))))
+            //log(Module._f1());
+            //log( FS.readFile("1.txt",{encoding:"utf8"}));
+            var filename="1.txt"
+            var cbfnname="downloadSucceededCb_"+filename;
+            window[cbfnname]=function(data){
+                console.log(data);
+                console.log(FS.readFile("my"+filename,{encoding:"utf8"}));
+            }
+            Module._f2(Module.allocateUTF8(filename))
+            
+        }
+
+    </script>
+</body>
+</html>
