@@ -64,7 +64,7 @@ int cout = 100;
 EMSCRIPTEN_KEEPALIVE
 int f1()
 {
-    FILE *f = fopen("1.txt", "a");
+    FILE *f = fopen("111.txt", "w");
     if (f == NULL)
     {
         printf("fopen r null \n");
@@ -99,7 +99,7 @@ void downloadSucceeded(emscripten_fetch_t *fetch) {
   // The data is now available at fetch->data[0] through fetch->data[fetch->numBytes-1];
 
 
-  FILE *f=fopen(string_concat("my",fetch->url), "a+b");
+  FILE *f=fopen(string_concat("my",fetch->url), "w+b");
   fwrite(fetch->data,1,fetch->numBytes,f);
 
   fclose(f);
