@@ -39,6 +39,8 @@
                 img.src=url;
                 document.getElementById("img").appendChild(img)
             }
+            Module._f2(Module.allocateUTF8(filename))
+            
             var filename1="1.txt"
             window["downloadSucceededCb_"+filename1]=function(data){
                 //文字处理处理

@@ -1,2 +1,4 @@
 /emsdk-main
 /.vscode
+/dist/main.js
+/dist/main.wasm

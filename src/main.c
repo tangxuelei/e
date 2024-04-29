@@ -95,6 +95,7 @@ EM_JS(void, downloadSucceededCbCall, (const char *filename), {
 });
 
 void downloadSucceeded(emscripten_fetch_t *fetch) {
+//   emscripten_sleep(3000);
   printf("Finished downloading %llu bytes from URL %s.\n", fetch->numBytes, fetch->url);
   // The data is now available at fetch->data[0] through fetch->data[fetch->numBytes-1];
 

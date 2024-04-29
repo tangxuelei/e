@@ -1,1 +1,5 @@
->emcc src\main.c -o dist\main.js -s EXPORTED_RUNTIME_METHODS=['UTF8ToString','allocateUTF8','writeI53ToI64'] -sFETCH
+emcc src/main.c -o dist/main.js -s EXPORTED_RUNTIME_METHODS=[UTF8ToString,allocateUTF8] -sFETCH
+
+emcc src/main.c -o dist/main.js  -sFETCH
+
+emcc src/main.c -o dist/main.js -s EXPORTED_RUNTIME_METHODS=UTF8ToString,allocateUTF8 -sFETCH 
